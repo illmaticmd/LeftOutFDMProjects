@@ -1,0 +1,13 @@
+This is a target input file
+for demonstrating Java IO functionality.
+
+The contents of this file will be read and then 
+		written to the console 
+				or to              a 
+
+
+
+target output
+file using
+
+		the Java IO API!!

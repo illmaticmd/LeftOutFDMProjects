@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+	<!-- Bean declarations go here -->
+	<bean id="mainSt" class="com.fdmgroup.demos.town.Address">
+		<property name="number" value="100"></property>
+		<property name="street" value="Main Street"></property>
+	</bean>
+	<bean id="mrSmith" class="com.fdmgroup.demos.town.Person">
+		<property name="name" value="Mohamad"></property>
+		<property name="job" value="Software Engineer"></property>
+	</bean>
+	<bean id="house" class="com.fdmgroup.demos.town.House"
+		init-method="" autowire="byType">
+		<constructor-arg>
+			<list>
+				<ref bean="mainSt" />
+				<ref bean="mrSmith" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="wallSt" class="com.fdmgroup.demos.town.Address">
+		<property name="number" value="14"></property>
+		<property name="street" value="Wall Street"></property>
+	</bean>
+	<bean id="msDoe" class="com.fdmgroup.demos.town.Person">
+		<property name="name" value="Jane"></property>
+		<property name="job" value="Building Manager"></property>
+	</bean>
+</beans>
